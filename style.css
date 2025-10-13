@@ -1,0 +1,220 @@
+/* --- Reset dasar --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f7fff7;
+    color: #333;
+}
+
+/* --- Navbar --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2ecc71;
+    padding: 12px 25px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav h2 {
+    font-weight: 600;
+}
+
+nav button {
+    background: white;
+    color: #27ae60;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #27ae60;
+    color: white;
+}
+
+/* --- Jumbotron --- */
+.jumbotron {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+    background-image: url('1631879363309.webp'); /* ganti dengan nama file background kamu */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.jumbotron::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* lapisan transparan biar teks tetap terbaca */
+}
+
+.jumbotron h1, .jumbotron p {
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.jumbotron p {
+    font-size: 18px;
+}
+
+/* --- Kategori --- */
+.kategori {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.kategori button {
+    margin: 6px;
+    padding: 10px 18px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.kategori button:hover {
+    background: #219150;
+}
+
+/* --- Container Produk --- */
+.produk-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    background-image: url('img/bg-produk.jpg'); /* ganti dengan nama file background produk */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --- Card Produk --- */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    width: 220px;
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin-top: 10px;
+    color: #2c3e50;
+}
+
+.card p {
+    color: #16a085;
+    font-weight: bold;
+}
+
+.card button {
+    margin: 5px;
+    padding: 8px 10px;
+    border: none;
+    background: #27ae60;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #219150;
+}
+
+/* --- Tabel Keranjang --- */
+table {
+    width: 85%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #27ae60;
+    color: white;
+}
+
+td button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+td button:hover {
+    background: #c0392b;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    background: #2ecc71;
+    color: white;
+    padding: 15px;
+    margin-top: 50px;
+    font-weight: 500;
+}
+
+/* --- Responsif --- */
+@media (max-width: 600px) {
+    .produk-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .jumbotron h1 {
+        font-size: 28px;
+    }
+}
